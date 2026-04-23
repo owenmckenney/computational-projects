@@ -1,1 +1,6 @@
 /comp-env/
+/.vscode/
+/pinn-wave-equation-solver/.pinn-env/
+/pinn-wave-equation-solver/checkpoints/
+/pinn-wave-equation-solver/__pycache__/
+/pinn-wave-equation-solver/training-datasets/
