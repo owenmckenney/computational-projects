@@ -19,15 +19,15 @@ T = 0.5
 amplitude = -1.0
 
 # training parameters
-num_epochs = 20
+num_epochs = 100
 learning_rate = 1e-3
-batch_size_runs = 2
+batch_size_runs = 8
 
 # number of sampled points in each training run
-num_supervised_points = 64
-num_interior_points = 64
-num_initial_points = 16
-num_boundary_points = 16
+num_supervised_points = 128
+num_interior_points = 128
+num_initial_points = 32
+num_boundary_points = 32
 
 # loss weights
 w_data = 20.0
@@ -41,8 +41,8 @@ x0_min = 0.1
 x0_max = 0.9
 y0_min = 0.1
 y0_max = 0.9
-sigma_min = 0.05
-sigma_max = 0.2
+sigma_min = 0.1
+sigma_max = 0.1
 
 
 # initial wave shape at t = 0 for a batch of Gaussian parameters
@@ -231,7 +231,7 @@ def main():
     # save model weights in a checkpoint folder
     os.makedirs("checkpoints", exist_ok=True)
 
-    save_path = os.path.join("checkpoints", "pinn_wave_model.pt")
+    save_path = os.path.join("checkpoints", "pinn_wave_model_colab1.pt")
     torch.save(model.state_dict(), save_path)
 
     print("Training complete.")

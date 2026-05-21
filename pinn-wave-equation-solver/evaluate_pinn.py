@@ -6,7 +6,6 @@ import torch
 
 from pinn_model import PINN
 
-
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
@@ -168,7 +167,7 @@ def run_finite_differences():
 
 
 def main():
-    checkpoint_path = os.path.join("checkpoints", "pinn_wave_model.pt")
+    checkpoint_path = os.path.join("checkpoints", "pinn_wave_model_colab1.pt")
 
     if not os.path.exists(checkpoint_path):
         raise FileNotFoundError(

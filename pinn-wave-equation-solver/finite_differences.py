@@ -18,7 +18,7 @@ class WaveEquationFD():
         # initial condition
         self.x0 = 0.5 * Lx if x0 is None else x0
         self.y0 = 0.5 * Ly if y0 is None else y0
-        self.sigma = 0.2 * min(Lx, Ly) if sigma is None else sigma
+        self.sigma = 0.1 * min(Lx, Ly) if sigma is None else sigma
         self.amplitude = amplitude
 
         # use a little less than the stability limit
